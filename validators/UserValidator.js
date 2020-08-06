@@ -1,4 +1,4 @@
-const { celebrate , Joi, Segments} =require('celebrate');
+const { celebrate , Joi, Segments} = require('celebrate');
 
 module.exports = {
     create: celebrate ({
@@ -9,4 +9,12 @@ module.exports = {
         password: Joi.string().required(),
         }),
     }),
+    update: celebrate ({
+        [Segments.BODY]: Joi.object().keys({
+        first_name: Joi.string(),
+        last_name: Joi.string(),
+        email: Joi.string(),    
+        }),
+    }),
+
 };
