@@ -21,6 +21,7 @@ module.exports = {
         else {
             const newUser = new User(body);
         const user = await newUser.save();
+        user.password = undefined
         res.status(201).json(user);
         }
         } catch (error) {
