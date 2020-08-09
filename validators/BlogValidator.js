@@ -17,11 +17,4 @@ module.exports = {
         author: Joi.string().required(),    
         }),
     }),
-    eliminate: celebrate ({
-        [Segments.BODY]: Joi.object().keys({
-        first_name: Joi.string(),
-        last_name: Joi.string(),
-        email: Joi.string(),    
-        }),
-    }),
 };

@@ -9,6 +9,6 @@ router.get('/blog', BlogController.findAll);
 router.get('/blog/:id', BlogController.findOne)
 router.post('/blog', verifyToken, BlogValidator.create, BlogController.create);
 router.patch('/blog/:id', verifyToken, BlogValidator.update, BlogController.update)
-router.delete('/blog/:id', verifyToken, BlogValidator.eliminate, BlogController.eliminate)
+router.delete('/blog/:id', verifyToken, BlogController.eliminate)
 
 module.exports = router;
