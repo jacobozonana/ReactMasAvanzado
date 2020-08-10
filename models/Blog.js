@@ -19,7 +19,7 @@ const blogSchema = new Schema({
     },
     date:{
         type: Date,
-        required: true
+        default: Date.now(),
     },
     author:{
         type: String,
