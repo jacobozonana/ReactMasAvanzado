@@ -13,7 +13,8 @@ module.exports = {
         [Segments.BODY]: Joi.object().keys({
         first_name: Joi.string(),
         last_name: Joi.string(),
-        email: Joi.string(),    
+        email: Joi.string(),
+        
         }),
     }),
    
